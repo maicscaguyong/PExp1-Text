@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - K-On!</title>
+    <link rel="stylesheet" href="b.css"> 
+</head>
+<body>
+    <h3>about</h3>
+    <p>K-ON!'s story revolves around five Japanese high school girls who join their school's Light Music Club. The show follows the daily lives of each member and shows their interactions with each other, their teachers, friends, and families.</p>
+    <br>
+    <h3>main characters</h3>
+
+    <div class="grid-container">
+
+        <div style="grid-column: 1;">
+            <img src="image/yui.png">
+            <p>Yui</p>
+        </div>
+
+        <div style="grid-column: 2;">
+            <img src="image/ritsu.png">
+            <p>Ritsu</p>
+        </div>
+
+        <div style="grid-column: 3;">
+            <img src="image/mio.png">
+            <p>Mio</p>
+        </div>
+
+        <div style="grid-column: 1;">
+            <img src="image/tsumugi.png">
+            <p>Tsumugi</p>
+        </div>
+
+        <div style="grid-column: 2;">
+            <img src="image/azusa.png">
+            <p>Azusa</p>
+        </div>
+    </div>
+    
+    <script type="module">
+        import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+      
+        const widget = await Chatbox.initBubble({
+          agentId: 'cm06lm2a901s0ljwkn7l8cqce',
+          
+          // optional 
+          // If provided will create a contact for the user and link it to the conversation
+          contact: {
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'customer@email.com',
+            phoneNumber: '+33612345644',
+            userId: '42424242',
+          },
+          // optional
+          // Override initial messages
+          initialMessages: [
+            'Hello Georges how are you doing today?',
+            'How can I help you ?',
+          ],
+          // optional
+          // Provided context will be appended to the Agent system prompt
+          context: "The user you are talking to is John. Start by Greeting him by his name.",
+        });
+      
+        // open the chat bubble
+        widget.open();
+      
+        // close the chat bubble
+        widget.close()
+      
+        // or 
+        widget.toggle()
+      </script>
+      
+</body>
+</html>
