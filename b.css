@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -18,6 +19,13 @@ body::before {
     z-index: -1;
 }
 
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Grid Layout for Main Characters */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -26,10 +34,12 @@ body::before {
     margin-top: 20px;
 }
 
+/* Apply fade-in to images and text */
 .grid-container img, .grid-container p, h3, p {
     animation: fadeIn 2s ease-in-out;
 }
 
+/* Character Image Styling */
 .grid-container img {
     width: 100%;
     height: auto;
@@ -38,6 +48,7 @@ body::before {
     border: 3px solid #ca0b4a;
 }
 
+/* Character Text Styling */
 .grid-container p {
     text-align: center;
     margin-top: 10px;
@@ -48,6 +59,7 @@ body::before {
     grid-row: 2; 
 }
 
+/* Section Titles */
 h3 {
     font-family: 'Arial Black', sans-serif;
     color: #ffffff;
@@ -57,21 +69,24 @@ h3 {
     text-align: center;
 }
 
+/* General Paragraph Styling */
 p {
     font-family: 'Arial', sans-serif;
     color: white;
     font-size: 1.2rem; 
-    text-align: center;
+    margin: 0;
     text-shadow: 0px 2px 0 #ca0b4a; 
+    text-align: center;
+    z-index: 1; 
 }
 
-/* Back Button */
+/* Back Button Styling */
 .btn-back {
     font-family: 'Arial Black', sans-serif;
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem; /* Starting padding */
     margin: 20px auto;
-    font-size: 1rem;
+    font-size: 1rem; /* Starting font size */
     text-transform: uppercase;
     text-decoration: none;
     color: white;
@@ -80,9 +95,10 @@ p {
     border-radius: 50px;
     text-align: center;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in to the button */
 }
 
-/* Responsive Back Button */
+/* Responsive Button */
 @media screen and (max-width: 1200px) {
     .btn-back {
         padding: 0.65rem 1.3rem;
@@ -111,6 +127,7 @@ p {
     }
 }
 
+/* Button Hover and Active States */
 .btn-back:hover {
     background-color: white;
     color: #ca0b4a;
