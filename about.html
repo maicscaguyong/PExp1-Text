@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="b.css"> 
 </head>
 <body>
-    <h3>about</h3>
+    <h3>About</h3>
     <p>K-ON!'s story revolves around five Japanese high school girls who join their school's Light Music Club. The show follows the daily lives of each member and shows their interactions with each other, their teachers, friends, and families.</p>
+
     <br>
-    <h3>main characters</h3>
+    <h3>Main Characters</h3>
 
     <div class="grid-container">
 
@@ -39,15 +40,14 @@
             <p>Azusa</p>
         </div>
     </div>
+
+    <a href="index.html" class="btn-back">Back to Home</a>
     
     <script type="module">
         import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
       
         const widget = await Chatbox.initBubble({
           agentId: 'cm06lm2a901s0ljwkn7l8cqce',
-          
-          // optional 
-          // If provided will create a contact for the user and link it to the conversation
           contact: {
             firstName: 'John',
             lastName: 'Doe',
@@ -55,26 +55,14 @@
             phoneNumber: '+33612345644',
             userId: '42424242',
           },
-          // optional
-          // Override initial messages
           initialMessages: [
             'Hello Georges how are you doing today?',
             'How can I help you ?',
           ],
-          // optional
-          // Provided context will be appended to the Agent system prompt
           context: "The user you are talking to is John. Start by Greeting him by his name.",
         });
       
-        // open the chat bubble
         widget.open();
-      
-        // close the chat bubble
-        widget.close()
-      
-        // or 
-        widget.toggle()
       </script>
-      
 </body>
 </html>
