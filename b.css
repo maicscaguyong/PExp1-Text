@@ -18,11 +18,6 @@ body::before {
     z-index: -1;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -32,7 +27,7 @@ body::before {
 }
 
 .grid-container img, .grid-container p, h3, p {
-    animation: fadeIn 2s ease-in-out; /* Apply fade-in to images and text */
+    animation: fadeIn 2s ease-in-out;
 }
 
 .grid-container img {
@@ -58,10 +53,7 @@ h3 {
     color: #ffffff;
     font-size: 2rem;
     text-shadow: 3px 3px 0 #ca0b4a;
-    position: relative;
     margin: 20px 0; 
-    text-transform: capitalize;
-    z-index: 1; 
     text-align: center;
 }
 
@@ -69,8 +61,62 @@ p {
     font-family: 'Arial', sans-serif;
     color: white;
     font-size: 1.2rem; 
-    margin: 0;
-    text-shadow: 0px 2px 0 #ca0b4a; 
     text-align: center;
-    z-index: 1; 
+    text-shadow: 0px 2px 0 #ca0b4a; 
+}
+
+/* Back Button */
+.btn-back {
+    font-family: 'Arial Black', sans-serif;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 20px auto;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: #ca0b4a;
+    border: 2px solid #ca0b4a;
+    border-radius: 50px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* Responsive Back Button */
+@media screen and (max-width: 1200px) {
+    .btn-back {
+        padding: 0.65rem 1.3rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .btn-back {
+        padding: 0.55rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .btn-back {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .btn-back {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.7rem;
+    }
+}
+
+.btn-back:hover {
+    background-color: white;
+    color: #ca0b4a;
+    transform: scale(1.05);
+}
+
+.btn-back:active {
+    transform: scale(0.95);
 }
